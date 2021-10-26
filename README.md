@@ -47,7 +47,7 @@ Sharable Jupyter Python Notebooks
 ### [GitHub CodeSpaces](https://github.com/features/codespaces) 
 Lets users run VS Code in their browser connected to powerful VMs. This is a full-fat version of VS Code running in the cloud. Extremely useful and cost-effective for developing code using thin clients or in a team setting. 
 
-## Virtual environments
+## Virtual environments (redux)
 
 Virtual environments are extremely useful for collaboration since virtualenvs allow you to specify versions of python and required packages for a project. However, each package manager has its own way of setting up virtual environments, so even the best solutions tend to have issues with cross platform compatibility. 
 
