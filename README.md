@@ -16,7 +16,7 @@ The three most common approaches to setting up a python environment are:
    - Pros: "everything and the kitchen sink." Cross-platform (Windows, Linux, MacOS)
    - Cons: installation is bloated and promotes lazy dependency/package management. 
 
-1. Alternatively, install [Miniconda](https://docs.conda.io/en/latest/miniconda.html). Miniconda is a small, bootstrap version of Anaconda that includes only `conda`, Python, and the packages they depend on. Unlike `pip` which only installs Python packages published on PyPI, `conda` can install packages _outside_ of the Python ecosystem, such as R and CUDA. However, `conda` is more complicated than `pip` especially if you are unfamiliar with working with virtual environemnts. 
+1. Alternatively, install [Miniconda](https://docs.conda.io/en/latest/miniconda.html). Miniconda is a small, bootstrap version of Anaconda that includes only `conda`, Python, and the packages they depend on. Unlike `pip` which only installs Python packages to the current python environment, `conda` can create and manage environments as well as install non-python packages such as CUDA and R. The learning curve to get started is slightly steeper, but it's definitely a more powerful tool and the package repository (conda-forge) has more "optimally" built packages for scientific computing. For example, `numpy` is built against Intel MKL instead of OpenBLAS. 
 
 ## Choosing an IDE 
 
