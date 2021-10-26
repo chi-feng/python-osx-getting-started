@@ -12,7 +12,7 @@ There are three popular approaches to setting up a python environment from easie
 
 2. Install [Homebrew](https://brew.sh) and run `brew install python3`. Then use `pip` to install any Python packages you may need. Instead of installing packages _globally_&mdash;which is the default&mdash;you can optionally use virtual environments to manage different versions of packages for portability and reproducibility. 
 
-3. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html). Miniconda is a free minimal installer for `conda`. It is a small, bootstrap version of Anaconda that includes only `conda`, Python, and the packages they depend on. Unlike `pip` which onl installs Python packages published on PyPI, `conda` is much more powerful can install other packages _outside_ of the Python package ecosystem, such as R and CUDA. However, more steps are needed to get started. 
+3. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html). Miniconda is a free minimal installer for `conda`. It is a small, bootstrap version of Anaconda that includes only `conda`, Python, and the packages they depend on. Unlike `pip` which only installs Python packages published on PyPI, `conda` is much more powerful can install other packages _outside_ of the Python package ecosystem, such as R and CUDA. However, additional steps and knowledge are required to get the most out of `conda`. 
 
 ## Choosing an IDE 
 
