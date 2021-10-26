@@ -9,14 +9,20 @@ First, you will need to set up a Python 3 environment on your computer. The syst
 There are three popular approaches to setting up a python environment from easiest (when it works) to most flexible:
 
 1. If you don't want to mess with package management or virtual environments, the most straightforward option is to install [Anaconda (Individual Edition)](https://www.anaconda.com/products/individual). Anaconda comes with 1500+ of the most popular scientific computing packages compiled with sensible defaults (e.g. numpy is compiled using Intel MKL instead of OpenBLAS). 
+   - Pros: "everything and the kitchen sink." Cross-platform (Windows, Linux, MacOS)
+   - Cons: installation is bloated and promotes lazy dependency/package management. Requires buying a license if collaborating on commercial project.
 
 2. Install [Homebrew](https://brew.sh) and run `brew install python3`. Then use `pip` to install any Python packages you may need. Instead of installing packages _globally_&mdash;which is the default&mdash;you can optionally use virtual environments to manage different versions of packages for portability and reproducibility. 
+    - Pros: "Official" package manager according to Python Package Authority. PyPI also has the most up-to-date packages. Most Python references/tutorials use `pip` or `pipenv`. 
+    - Cons: May struggle with complicated non-standard scientific computing dependencies like TensorFlow built against a particular version of BLAS or CUDA, or numpy compiled using Intel MKL.
 
 3. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html). Miniconda is a free minimal installer for `conda`. It is a small, bootstrap version of Anaconda that includes only `conda`, Python, and the packages they depend on. Unlike `pip` which only installs Python packages published on PyPI, `conda` is much more powerful can install other packages _outside_ of the Python package ecosystem, such as R and CUDA. However, additional steps and knowledge are required to get the most out of `conda`. 
+    - Pros: Can specify entire system configuration (e.g. version of python and other binaries). 
+    - Cons: Configuration requires extra steps.
 
 ## Choosing an IDE 
 
-The best choice (for most use cases) is [VS Code](https://code.visualstudio.com/download) with the following extensions installed:
+The best choice for most use cases is [VS Code](https://code.visualstudio.com/download) with the following extensions:
 1. [Python extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python). 
    - IntelliSense: Edit your code with auto-completion, code navigation, syntax checking and more
    - Linting: Get additional code analysis with Pylint, Flake8 and more
@@ -37,9 +43,9 @@ VS Code has full support of Jupyter notebooks. In many ways the experience is su
 
 See full documentation here (https://code.visualstudio.com/docs/datascience/jupyter-notebooks#_table-of-contents)
 
-Another great feature of VS Code is [Remote development using SSH](https://code.visualstudio.com/docs/remote/ssh), which lets you open a remote folder on any remote machine, virtual machine, or container with a running SSH server and take full advantage of VS Code's feature set. This is useful, for example, if you are on a Mac and need to run CUDA code on a Linux desktop. 
+Another great feature of VS Code is [Remote development using SSH](https://code.visualstudio.com/docs/remote/ssh), which lets you open a remote folder on any remote machine, virtual machine, or container with a running SSH server and take full advantage of VS Code's feature set. This is useful, for example, if you are on a Mac and need to run CUDA on a Linux desktop. 
 
-Finally, a feature that could be really useful for pedagogy is Live Share, which lets multiple users (1-to-1 or 1-to-many) share a single VS Code session (everyone can see all project files, and follow the presenters cursor). https://code.visualstudio.com/learn/collaboration/live-share
+Finally, a feature that could be really useful for pedagogy is Live Share, which lets multiple users share a single VS Code session. https://code.visualstudio.com/learn/collaboration/live-share
 
 Another alternative IDE which is useful for _large_ projects is [PyCharm](https://www.jetbrains.com/pycharm/) but a lot of important features such as support for jupyter notebooks are only available in the Professional paid version, which is subscription only. 
 
