@@ -40,8 +40,6 @@ Another great feature of VS Code is [Remote development using SSH](https://code.
 
 ### [Deepnote](https://deepnote.com/)
 Collaborative Jupyter Python Notebooks
-![image](https://user-images.githubusercontent.com/336681/138863363-e2bd8331-5562-4f14-aea5-f50c1e1c8b99.png)
-
 
 ### [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb)
 Sharable Jupyter Python Notebooks
@@ -51,9 +49,11 @@ Lets users run VS Code in their browser connected to powerful VMs. This is a ful
 
 ## Virtual environments
 
-Virtual environments are extremely useful when collaborating on a project with other developers since virtualenvs allow you to specify specific versions of python and required packages for a particular peojct. However, each package manager has its own way of setting up virtual environments, and even the best solutions tend to have issues with cross platform compatibility. 
+Virtual environments are extremely useful for collaboration since virtualenvs allow you to specify versions of python and required packages for a project. However, each package manager has its own way of setting up virtual environments, so even the best solutions tend to have issues with cross platform compatibility. 
 
-**If you are working on a solo project, you probably don't need to set up a virtual environment unless your base environment is totally broken.** However, if you plan on sharing your code, then you can always export your current environment so that others can duplicate it. Using `pip`, you can export all installed packages and their versions to a file:
+**If you are working on a solo project, you probably don't need to set up a virtual environment unless your base environment is totally broken.** 
+
+However, if you plan on sharing your code, then you can always export your current environment so that others can duplicate it. Using `pip`, you can export all installed packages and their versions to a file:
 ```bash
 $ pip freeze > requirements.txt
 ```
@@ -63,13 +63,10 @@ $ pip install -r requirements.txt
 ```
 
 
-## Notebooks vs. scripts
+## Notebook pitfalls vs. scripts
 
 Notebooks, when done well, are great for achieving what Donald Knuth called [Literate Programming](https://en.wikipedia.org/wiki/Literate_programming#:~:text=Literate%20programming%20is%20a%20programming,source%20code%20can%20be%20generated.). This is usually achieved by interleaving code cells with markdown cells, which support LaTeX markup. However, notebooks have several pitfalls:
 1. Out-of-order execution can lead to inconsistent results. 
 2. Writing code inside of cells makes it awkward to use abstractions such as functions, classes, or modules. This is because entire classes and functions must be contained within a single cell, which jumbles the execution order. 
 3. Notebooks don't play well with version control since they have a lot of embedded binary data and create nasty merge conflicts.
 5. Some forms of CPU parallelism are not supported inside of a notebook.
-
-With VS Code, the line between scripts and notebooks are blurred. You can evaluate any part of a python script in an interactive REPL and seamlessly convert between scripts and notebook, similar to how `%%` blocks work in MATLAB. 
-
