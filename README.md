@@ -51,10 +51,21 @@ Another alternative IDE which is useful for _large_ projects is [PyCharm](https:
 
 ## Notebooks vs. scripts
 
-Notebooks, when done well, are great for achieving what Donald Knuth called [Literate Programming](Literate programming). This is usually achieved by interleaving code cells with markdown cells, which support LaTeX markup. However, notebooks have several pitfalls:
+Notebooks, when done well, are great for achieving what Donald Knuth called [Literate Programming](https://en.wikipedia.org/wiki/Literate_programming#:~:text=Literate%20programming%20is%20a%20programming,source%20code%20can%20be%20generated.). This is usually achieved by interleaving code cells with markdown cells, which support LaTeX markup. However, notebooks have several pitfalls:
 1. Out-of-order execution can lead to inconsistent results. 
 2. Writing code inside of cells makes it difficult to use proper software abstractions such as functions, classes, or modules. This is because entire classes and functions must be contained within a single cell, which exacerbates out-of-order execution issue when updating functions or classes. Furthermore, changes to code in an imported module require resetting the kernel to take effect.
 3. Notebooks do not play well with version control unless you use certain workarounds like converting notebooks into python scripts before committing changes.
 5. Some forms of multiprocessing are not supported inside of a notebook.
 
 With VS Code, the lines between scripts and notebooks are blurred. You can evaluate any part of a python script in an interactive REPL and seamlessly convert between scripts and notebook, similar to how `%%` blocks work in MATLAB. 
+
+## Cloud developer environments 😎
+
+A very exciting feature released recently by GitHub is called [CodeSpaces](https://github.com/features/codespaces) which lets users run VS Code in their browser and connect to a VM running a preconfigured Docker image. 
+
+1. The VS Code experience is 100% equivalent to the native application, since the native application is actually a web app running inside an Electron window. All your extensions work normally. 
+2. You can use a "thin client" like an iPad and develop code as if you are working locally on a 32-core workstation. 
+3. An extremely consistent development environment for yourself and your team, since everyone is using the same container image (but separate local storage for each user). 
+4. Pricing is very reasonable at $0.36/hr for a quad-core VM. 
+
+This is very similar to the [CS50 IDE](https://ide.cs50.io/) used by the Harvard CS 50 course, but much more powerful and flexible. 
