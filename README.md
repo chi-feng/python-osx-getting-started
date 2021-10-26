@@ -28,7 +28,7 @@ The best choice (for most use cases) is [VS Code](https://code.visualstudio.com/
    - Refactoring: Restructure your Python code with variable extraction, method extraction and import sorting
 2. [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) (type checking, static code analysis, auto-imports, semantic highlighting, etc.)
 
-VS Code has full support of Jupyter notebooks. In many ways the experience is superior to running jupyter notebooks in the browser. See https://code.visualstudio.com/docs/languages/python#_jupyter-notebooks. Some special features that are absent in the browser-based Jupyter notebook are:
+VS Code has full support of Jupyter notebooks. In many ways the experience is superior to running Jupyter notebooks in the browser. See https://code.visualstudio.com/docs/languages/python#_jupyter-notebooks. Some special features that are absent in the browser-based Jupyter notebook are:
 1. Table of contents
 2. IntelliSense support in the Jupyter Notebook Editor
 3. Variable explorer and Data Viewer
