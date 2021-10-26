@@ -38,14 +38,14 @@ Another great feature of VS Code is [Remote development using SSH](https://code.
 
 ## Cloud developer environments 
 
-### [Deepnote](https://deepnote.com/) Overleaf meets Google Colab
+### [Deepnote](https://deepnote.com/) O
+Collaborative Jupyter Python Notebooks
 
 ### [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb)
+Sharable Jupyter Python Notebooks
 
-### GitHub [CodeSpaces](https://github.com/features/codespaces) 
-Lets users run VS Code in their browser and connect to a VM running a preconfigured Docker image. 
-
-This is a full-fat version of VS Code running in the cloud. Extremely useful and cost-effective for developing code using thin clients or in a team setting. 
+### [GitHub CodeSpaces](https://github.com/features/codespaces) 
+Lets users run VS Code in their browser connected to powerful VMs. This is a full-fat version of VS Code running in the cloud. Extremely useful and cost-effective for developing code using thin clients or in a team setting. 
 
 ## Notebooks vs. scripts
 
