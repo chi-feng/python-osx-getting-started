@@ -39,6 +39,8 @@ See full documentation here (https://code.visualstudio.com/docs/datascience/jupy
 
 Another great feature of VS Code is [Remote development using SSH](https://code.visualstudio.com/docs/remote/ssh), which lets you open a remote folder on any remote machine, virtual machine, or container with a running SSH server and take full advantage of VS Code's feature set. This is useful, for example, if you are on a Mac and need to run CUDA code on a Linux desktop. 
 
+Finally, a feature that could be really useful for pedagogy is Live Share, which lets multiple users (1-to-1 or 1-to-many) share a single VS Code session (everyone can see all project files, and follow the presenters cursor). https://code.visualstudio.com/learn/collaboration/live-share
+
 Another alternative IDE which is useful for _large_ projects is [PyCharm](https://www.jetbrains.com/pycharm/) but a lot of important features such as support for jupyter notebooks are only available in the Professional paid version, which is subscription only. 
 
 ## Notebooks vs. scripts
