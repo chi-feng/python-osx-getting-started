@@ -40,12 +40,28 @@ Another great feature of VS Code is [Remote development using SSH](https://code.
 
 ### [Deepnote](https://deepnote.com/) O
 Collaborative Jupyter Python Notebooks
+![image](https://user-images.githubusercontent.com/336681/138863363-e2bd8331-5562-4f14-aea5-f50c1e1c8b99.png)
+
 
 ### [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb)
 Sharable Jupyter Python Notebooks
 
 ### [GitHub CodeSpaces](https://github.com/features/codespaces) 
 Lets users run VS Code in their browser connected to powerful VMs. This is a full-fat version of VS Code running in the cloud. Extremely useful and cost-effective for developing code using thin clients or in a team setting. 
+
+## Virtual environments
+
+Virtual environments are extremely useful when collaborating on a project with other developers since virtualenvs allow you to specify specific versions of python and required packages for a particular peojct. However, each package manager has its own way of setting up virtual environments, and even the best solutions tend to have issues with cross platform compatibility. 
+
+**If you are working on a solo project, you probably don't need to set up a virtual environment unless your base environment is totally broken.** However, if you plan on sharing your code, then you can always export your current environment so that others can duplicate it. Using `pip`, you can export all installed packages and their versions to a file:
+```bash
+$ pip freeze > requirements.txt
+```
+To import and install the requirements from a file, run
+```bash
+$ pip install -r requirements.txt
+```
+
 
 ## Notebooks vs. scripts
 
