@@ -16,9 +16,26 @@ There are three popular approaches to setting up a python environment from easie
 
 ## Choosing an IDE 
 
-The best choice (for most use cases) is [VS Code](https://code.visualstudio.com/download) with the [Python extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+The best choice (for most use cases) is [VS Code](https://code.visualstudio.com/download) with the following extensions installed:
+1. [Python extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python). 
+   - IntelliSense: Edit your code with auto-completion, code navigation, syntax checking and more
+   - Linting: Get additional code analysis with Pylint, Flake8 and more
+   - Code formatting: Format your code with black, autopep or yapf
+   - Debugging: Debug your Python scripts, web apps, remote or multi-threaded processes
+   - Testing: Run and debug tests through the Test Explorer with unittest or pytest.
+   - Jupyter Notebooks: Create and edit Jupyter Notebooks, add and run code cells, render plots, visualize variables through the variable explorer, visualize dataframes with the data viewer, and more
+   - Environments: Automatically activate and switch between virtualenv, venv, pipenv, conda and pyenv environments
+   - Refactoring: Restructure your Python code with variable extraction, method extraction and import sorting
+2. [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) (type checking, static code analysis, auto-imports, semantic highlighting, etc.)
 
-VS Code has full support of Jupyter notebooks. In many ways the experience is superior to running jupyter notebooks in the browser. See https://code.visualstudio.com/docs/languages/python#_jupyter-notebooks 
+VS Code has full support of Jupyter notebooks. In many ways the experience is superior to running jupyter notebooks in the browser. See https://code.visualstudio.com/docs/languages/python#_jupyter-notebooks. Some special features that are absent in the browser-based Jupyter notebook are:
+1. Table of contents
+2. IntelliSense support in the Jupyter Notebook Editor
+3. Variable explorer and Data Viewer
+4. Custom notebook diffing 
+5. Debugging using the Python language server debugger. 
+
+See full documentation here (https://code.visualstudio.com/docs/datascience/jupyter-notebooks#_table-of-contents)
 
 Another great feature of VS Code is [Remote development using SSH](https://code.visualstudio.com/docs/remote/ssh), which lets you open a remote folder on any remote machine, virtual machine, or container with a running SSH server and take full advantage of VS Code's feature set. This is useful, for example, if you are on a Mac and need to run CUDA code on a Linux desktop. 
 
@@ -26,11 +43,10 @@ Another alternative IDE which is useful for _large_ projects is [PyCharm](https:
 
 ## Notebooks vs. scripts
 
-Notebooks, when done well, are great for achieving what Donald Knuth called [Literate Programming](Literate programming). However, notebooks have several pitfalls:
+Notebooks, when done well, are great for achieving what Donald Knuth called [Literate Programming](Literate programming). This is usually achieved by interleaving code cells with markdown cells, which support LaTeX markup. However, notebooks have several pitfalls:
 1. Out-of-order execution can lead to inconsistent results. 
-2. Writing code inside of cells makes it difficult to use proper software abstractions such as functions, classes, or modules (entire classes and functions must be contained within a single cell). 
-3. Notebooks do not play well with version control unless you use workarounds.
+2. Writing code inside of cells makes it difficult to use proper software abstractions such as functions, classes, or modules. This is because entire classes and functions must be contained within a single cell, which exacerbates out-of-order execution issue when updating functions or classes. Furthermore, changes to code in an imported module require resetting the kernel to take effect.
+3. Notebooks do not play well with version control unless you use certain workarounds like converting notebooks into python scripts before committing changes.
 5. Some forms of multiprocessing are not supported inside of a notebook.
-6. Changes to code in an imported module require resetting the kernel to take effect.
 
-With VS Code, the lines between scripts and notebooks are blurred. You can evaluate any part of a python script in an interactive REPL and seamlessly convert between scripts and notebook, similar to `%%` blocks in MATLAB. 
+With VS Code, the lines between scripts and notebooks are blurred. You can evaluate any part of a python script in an interactive REPL and seamlessly convert between scripts and notebook, similar to how `%%` blocks work in MATLAB. 
