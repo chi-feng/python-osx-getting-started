@@ -1,5 +1,7 @@
 # Getting started with Python on OS X
 
+Note: if you are using an M1-based Mac, you should look out for universal binaries, or M1 builds for optimal performance.
+
 ## Setting up a Python environemnt
 
 First, you will need to set up a Python 3 environment on your computer. The system `python` on MacOS is still Python 2.7, which is deprecated and should NOT be used. 
@@ -14,7 +16,7 @@ There are three popular approaches to setting up a python environment from easie
 
 ## Choosing an IDE 
 
-The best choice (for most use cases) is [VS Code](VS Code) with the [Python extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+The best choice (for most use cases) is [VS Code](https://code.visualstudio.com/download) with the [Python extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
 VS Code has full support of Jupyter notebooks. In many ways the experience is superior to running jupyter notebooks in the browser. See https://code.visualstudio.com/docs/languages/python#_jupyter-notebooks 
 
@@ -22,13 +24,13 @@ Another great feature of VS Code is [Remote development using SSH](https://code.
 
 Another alternative IDE which is useful for _large_ projects is [PyCharm](https://www.jetbrains.com/pycharm/) but a lot of important features such as support for jupyter notebooks are only available in the Professional paid version, which is subscription only. 
 
-## Notebooks vs. python scripts
+## Notebooks vs. scripts
 
 Notebooks, when done well, are great for achieving what Donald Knuth called [Literate Programming](Literate programming). However, notebooks have several pitfalls:
 1. Out-of-order execution can lead to inconsistent results. 
 2. Writing code inside of cells makes it difficult to use proper software abstractions such as functions, classes, or modules (entire classes and functions must be contained within a single cell). 
 3. Notebooks do not play well with version control unless you use workarounds.
 5. Some forms of multiprocessing are not supported inside of a notebook.
-6. Changes to code in an imported module require a kernel reset to be reflected. 
+6. Changes to code in an imported module require resetting the kernel to take effect.
 
 With VS Code, the lines between scripts and notebooks are blurred. You can evaluate any part of a python script in an interactive REPL and seamlessly convert between scripts and notebook, similar to `%%` blocks in MATLAB. 
