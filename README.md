@@ -59,13 +59,12 @@ Notebooks, when done well, are great for achieving what Donald Knuth called [Lit
 
 With VS Code, the lines between scripts and notebooks are blurred. You can evaluate any part of a python script in an interactive REPL and seamlessly convert between scripts and notebook, similar to how `%%` blocks work in MATLAB. 
 
-## Cloud developer environments 😎
+## Cloud developer environments 
 
-A very exciting feature released recently by GitHub is called [CodeSpaces](https://github.com/features/codespaces) which lets users run VS Code in their browser and connect to a VM running a preconfigured Docker image. 
+### [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb)
+One-click to get started with a python notebook in the cloud with zero configuration required (for data-science) and free access to GPUs. 
 
-1. The VS Code experience is 100% equivalent to the native application, since the native application is actually a web app running inside an Electron window. All your extensions work normally. 
-2. You can use a "thin client" like an iPad and develop code as if you are working locally on a 32-core workstation. 
-3. An extremely consistent development environment for yourself and your team, since everyone is using the same container image (but separate local storage for each user). 
-4. Pricing is very reasonable at $0.36/hr for a quad-core VM. 
+### GitHub [CodeSpaces](https://github.com/features/codespaces) 
+Lets users run VS Code in their browser and connect to a VM running a preconfigured Docker image. 
 
-This is very similar to the [CS50 IDE](https://ide.cs50.io/) used by the Harvard CS 50 course, but much more powerful and flexible. 
+This is a full-fat version of VS Code running in the cloud. Extremely useful and cost-effective for developing code in a team setting. 
