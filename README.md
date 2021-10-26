@@ -9,14 +9,14 @@ First, you will need to set up a Python 3 environment on your computer. The syst
 The three most common approaches to setting up a python environment are:
 
 1. Install [Homebrew](https://brew.sh) and run `brew install python3`. Then use `pip install package-name` to install any Python packages you may need. 
-    - Pros: `pip` is the "official" Python package manager and has the most up-to-date index (PyPI). In addition, most Python/tutorials use `pip`. 
+    - Pros: `pip` is the "official" Python package manager and has the most up-to-date index (PyPI). 
     - Cons: YMMV if you need extremely specific build configurations for scientific computing packages, e.g., TensorFlow built against a particular version of BLAS or CUDA. 
 
 1. If you don't want to mess with package management or virtual environments, the most straightforward option is to install [Anaconda (Individual Edition)](https://www.anaconda.com/products/individual). Anaconda comes with over 1500 scientific computing packages preinstalled. 
    - Pros: "everything and the kitchen sink." Cross-platform (Windows, Linux, MacOS)
    - Cons: installation is bloated and promotes lazy dependency/package management. 
 
-1. Alternatively, install [Miniconda](https://docs.conda.io/en/latest/miniconda.html). Miniconda is a small, bootstrap version of Anaconda that includes only `conda`, Python, and the packages they depend on. Unlike `pip` which only installs Python packages published on PyPI, `conda` is much more powerful can install other packages _outside_ of the Python package ecosystem, such as R and CUDA. However, additional steps and knowledge are required to get the most out of `conda`. 
+1. Alternatively, install [Miniconda](https://docs.conda.io/en/latest/miniconda.html). Miniconda is a small, bootstrap version of Anaconda that includes only `conda`, Python, and the packages they depend on. Unlike `pip` which only installs Python packages published on PyPI, `conda` can install packages _outside_ of the Python ecosystem, such as R and CUDA. However, `conda` is more complicated than `pip` especially if you are unfamiliar with working with virtual environemnts. 
 
 ## Choosing an IDE 
 
