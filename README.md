@@ -9,7 +9,7 @@ First, you will need to set up a Python 3 environment on your computer. The syst
 The three most common approaches to setting up a python environment are:
 
 1. Install [Homebrew](https://brew.sh) and run `brew install python3`. Then use `pip install package-name` to install any Python packages you may need. 
-    - Pros: This is the "official" Python package manager and has the most up-to-date index (PyPI). In addition, most Python/tutorials use `pip`. 
+    - Pros: `pip` is the "official" Python package manager and has the most up-to-date index (PyPI). In addition, most Python/tutorials use `pip`. 
     - Cons: YMMV if you need extremely specific build configurations for scientific computing packages, e.g., TensorFlow built against a particular version of BLAS or CUDA. 
 
 1. If you don't want to mess with package management or virtual environments, the most straightforward option is to install [Anaconda (Individual Edition)](https://www.anaconda.com/products/individual). Anaconda comes with over 1500 scientific computing packages preinstalled. 
@@ -38,7 +38,7 @@ Another great feature of VS Code is [Remote development using SSH](https://code.
 
 ## Cloud developer environments 
 
-### [Deepnote](https://deepnote.com/) O
+### [Deepnote](https://deepnote.com/)
 Collaborative Jupyter Python Notebooks
 ![image](https://user-images.githubusercontent.com/336681/138863363-e2bd8331-5562-4f14-aea5-f50c1e1c8b99.png)
 
