@@ -63,6 +63,7 @@ With VS Code, the lines between scripts and notebooks are blurred. You can evalu
 
 ### [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb)
 One-click to get started with a python notebook in the cloud with zero configuration required (for data-science) and free access to GPUs. 
+https://www.youtube.com/watch?v=inN8seMm7UI
 
 ### GitHub [CodeSpaces](https://github.com/features/codespaces) 
 Lets users run VS Code in their browser and connect to a VM running a preconfigured Docker image. 
