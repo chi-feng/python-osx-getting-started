@@ -57,6 +57,6 @@ jobs:
         # original token for cloning your repository in a custom Authorization header. This is a bad idea 
         # because it then conflicts with the Authorization header added by Git when you use another repository, 
         # and the token that's issued is only valid for the original repository.
-        git config -l | grep 'http\..*\.extraheader' | cut -d= -f1 | xargs -L1 git config --unset-all
+        # git config -l | grep 'http\..*\.extraheader' | cut -d= -f1 | xargs -L1 git config --unset-all
         git push --force origin main:main
 
