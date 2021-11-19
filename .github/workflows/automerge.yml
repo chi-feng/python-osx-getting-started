@@ -1,0 +1,62 @@
+name: Automatic Merge
+
+on:
+  pull_request:
+    branches:
+      - "main"
+    paths-ignore:
+      - ".github/**"
+
+jobs:
+  merge_pr:
+    runs-on: ubuntu-latest
+    steps:
+#     - name: Checkout pull request branch on forked repo
+#       uses: actions/checkout@v2
+#       with:
+#         fetch-depth: 0
+#         ref: ${{github.event.pull_request.head.ref}}
+#         repository: ${{github.event.pull_request.head.repo.full_name}}
+#         token: ${{ github.token }}
+    - name: Clone pull request
+      run: |
+        rm -rf target
+        git clone https://github.com/${{github.event.pull_request.head.repo.full_name}} target
+        cd target
+        git checkout ${{github.event.pull_request.head.ref}}
+    - name: Auto merge pull request
+      run: |
+        cd target
+        PR_NUMBER=$(jq -r ".number" "$GITHUB_EVENT_PATH")
+        REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
+        echo "Collecting information about PR #$PR_NUMBER of $REPO_FULLNAME"
+
+        URI=https://api.github.com
+        API_HEADER="Accept: application/vnd.github.v3+json"
+        AUTH_HEADER="Authorization: token ${{ secrets.GITHUB_TOKEN }}"
+
+        pr_resp=$(curl -X GET -s -H "${AUTH_HEADER}" -H "${API_HEADER}" "${URI}/repos/$REPO_FULLNAME/pulls/$PR_NUMBER")
+
+        HEAD_REPO=$(echo "$pr_resp" | jq -r .head.repo.full_name)
+        HEAD_BRANCH=$(echo "$pr_resp" | jq -r .head.ref)
+        BASE_BRANCH=$(echo "$pr_resp" | jq -r .base.ref)
+
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$REPO_FULLNAME.git
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Merge Action"
+
+        set -o xtrace
+
+        git fetch origin $BASE_BRANCH
+        git checkout $BASE_BRANCH
+
+        # do the merge
+        git merge $HEAD_BRANCH --no-edit
+
+        # GitHub Actions stores a configuration option using one of the http.extraheader options to send the 
+        # original token for cloning your repository in a custom Authorization header. This is a bad idea 
+        # because it then conflicts with the Authorization header added by Git when you use another repository, 
+        # and the token that's issued is only valid for the original repository.
+        git config -l | grep 'http\..*\.extraheader' | cut -d= -f1 | xargs -L1 git config --unset-all
+        git push --force origin main:main
+
