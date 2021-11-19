@@ -62,6 +62,8 @@ To import and install the requirements from a file, run
 $ pip install -r requirements.txt
 ```
 
+test automerge
+
 
 ## Notebook pitfalls vs. scripts
 
