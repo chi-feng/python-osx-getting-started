@@ -70,3 +70,6 @@ Notebooks, when done well, are great for achieving what Donald Knuth called [Lit
 2. Writing code inside of cells makes it awkward to use abstractions such as functions, classes, or modules. This is because entire classes and functions must be contained within a single cell, which jumbles the execution order. 
 3. Notebooks don't play well with version control since they have a lot of embedded binary data and create nasty merge conflicts.
 5. Some forms of CPU parallelism are not supported inside of a notebook.
+
+
+test
